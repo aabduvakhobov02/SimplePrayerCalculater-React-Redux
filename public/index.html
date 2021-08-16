@@ -10,29 +10,44 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <title>Redux App</title>
   </head>
-  <body class="d-flex justify-content-center align-items-center text-center">
+  <body
+    class="d-flex justify-content-center align-items-center text-center"
+    style="background-color: #c4ae78"
+  >
     <h1 class="w-25" style="position: absolute; top: 100px">
       Simple Muslim Prayer Calculator with Redux
     </h1>
     <div
       id="root"
-      class="card bg-secondary w-25 mx-auto py-3"
-      style="margin-top: 18vw; height: 200%; position: relative"
+      class="card w-25 mx-auto py-3"
+      style="
+        margin-top: 18vw;
+        height: 200%;
+        position: relative;
+        background-color: #6f5b3e;
+      "
     >
-      <div class="card m-2">
+      <div class="card m-4">
         <h1 id="counter">0</h1>
       </div>
       <div class="">
-        <button id="inc" class="btn bg-success w-25 text-white m-2">
-          <h3>+</h3>
-        </button>
         <button id="dec" class="btn bg-danger w-25 text-white m-2">
-          <h3>-</h3>
+          <i class="fas fa-minus"></i>
         </button>
+
         <button id="rnd" class="btn bg-warning w-25 text-white m-2">
-          <h3>R</h3>
+          <i class="fas fa-sync-alt"></i>
+        </button>
+        <button id="inc" class="btn bg-success w-25 text-white m-2">
+          <i class="fa fa-plus"></i>
         </button>
       </div>
     </div>
