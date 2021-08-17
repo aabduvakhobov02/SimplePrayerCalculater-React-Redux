@@ -1,17 +1,16 @@
-import { createStore, bindActionCreators } from "redux";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import reducer from "./reducer";
-import * as actions from "./actions";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/app";
+// import "./style.css";
 
 const store = createStore(reducer);
-const { dispatch } = store;
 
-const { inc, dec, ref } = bindActionCreators(actions, dispatch);
-
-document.querySelector("#inc").addEventListener("click", inc);
-document.querySelector("#dec").addEventListener("click", dec);
-document.querySelector("#ref").addEventListener("click", ref);
-
-const update = () => {
-  document.querySelector("#counter").textContent = store.getState();
-};
-store.subscribe(update);
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
